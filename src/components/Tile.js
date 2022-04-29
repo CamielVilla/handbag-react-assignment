@@ -1,8 +1,6 @@
 import React from "react";
 
-
-
-function Tile ({title, image, content, paragraph}){
+function Tile ({title, image, content, children}) {
     if (content === "image") {
         return (
             <section>
@@ -12,12 +10,13 @@ function Tile ({title, image, content, paragraph}){
     }
     else if (content ==="text"){
         return (
-            <section>
-                <h2>{title}</h2>
-                <p>{paragraph}</p>
-            </section>
+           <section>
+               <h2>{title}</h2>
+               {children}
+           </section>
         )
     }
 }
 
-export default Tile
+
+export default Tile;

@@ -3,7 +3,6 @@ import './App.css';
 import Button from './components/Button';
 import Product from "./components/Product";
 import Tile from "./components/Tile";
-import Paragraphs from "./components/Paragraphs";
 import bag1 from "./assets/bag_1.png"
 import bag2 from "./assets/bag_2.png"
 import bag3 from "./assets/bag_3.png"
@@ -58,26 +57,27 @@ function App() {
         </main>
           <footer>
                   <Tile
-                  content="text"
-                  title="the brand"
-                  paragraph="lorum ipsum"
+                      content="text"
+                      title="brand"
+                      >
+                     <p>Lurom ipsum</p>
+                    </Tile>
+              <Tile
+                  content="image"
+                  title="brand"
+                  image={brand}
                   />
               <Tile
                   content="image"
-                  title= "Brand"
-                  image={brand}
-              />
-              <Tile
-                  content="image"
-                  title= "Our story"
+                  title="our story"
                   image={ourStory}
               />
               <Tile
                   content="text"
                   title="our story"
-                  paragraph="lorem ipsum dolor"
-              />
-
+              >
+                  <p>Lurom ipsum</p>
+              </Tile>
           </footer>
       </>
   );
